@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cameron Cheung's Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color:rgb(63, 63, 63);
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(63, 63, 63);
+      color: white;
+    }
+
     header {
       background-color: #341539;
-      color: white;
       padding: 1rem;
       text-align: left;
     }
+
     main {
       padding: 2rem;
     }
+
     footer {
       background-color: #341539;
-      color: white;
       text-align: left;
       padding: 1rem;
       position: fixed;
@@ -43,7 +49,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 My Website</p>
+    <p>&copy; 2025 Cameron Cheung</p>
   </footer>
 
 </body>
