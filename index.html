@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cameron Cheung's Portfolio</title>
   <style>
     * {
@@ -13,44 +13,48 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: rgb(63, 63, 63);
-      color: white;
+      background-color: #1e1e1e;
+      color: white; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    header {
-      background-color: #341539;
-      padding: 1rem;
-      text-align: left;
-    }
-
-    main {
+    .container {
+      max-width: 600px;
       padding: 2rem;
     }
 
-    footer {
-      background-color: #341539;
-      text-align: left;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    img.profile {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #341539;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Cameron's Portfolio</h1>
-  </header>
-
-  <main>
-    <p>This is a basic webpage template you can build on.</p>
-    <p>Edit the HTML to customize your content!</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Cameron Cheung</p>
-  </footer>
+  <div class="container">
+    <!-- Replace with your actual image file later -->
+    <img src="your-photo.jpg" alt="Cameron Cheung" class="profile" />
+    <h1>Cameron Cheung</h1>
+    <p>Student | Robotics Mentor | Kendo Practitioner</p>
+  </div>
 
 </body>
 </html>
