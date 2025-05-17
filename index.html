@@ -9,52 +9,130 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
       background-color: #1e1e1e;
-      color: white; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      color: white;
+    }
+
+    header {
+      background-color: #341539;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
-    .container {
-      max-width: 600px;
-      padding: 2rem;
-    }
-
     img.profile {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #341539;
+      border: 4px solid white;
       margin-bottom: 1rem;
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1.1rem;
+    p.subtitle {
       color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      background-color: #55215f;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #783083;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: #ffdbff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 180px;
+    }
+
+    footer {
+      background-color: #341539;
+      text-align: center;
+      padding: 1rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Replace with your actual image file later -->
-    <img src="52E4FAAA-8A13-4DCF-811A-00E9D7A4FEAA_1_201_a_Original.jpg" alt="Cameron Cheung" class="profile" />
+  <header>
+    <img src="your-photo.jpg" alt="Cameron Cheung" class="profile" />
     <h1>Cameron Cheung</h1>
-    <p>Student | Robotics Mentor | Kendo Practitioner</p>
-  </div>
+    <p class="subtitle">Student | Robotics Mentor | Kendo Practitioner</p>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Cameron, a high school student with a passion for robotics, mentoring, and martial arts. I’ve been doing kendo for 7 years and love helping middle school students get into STEM through robotics programs and fairs.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are a few things I’ve worked on:</p>
+    <ul>
+      <li>Organized a STEM Fair with industry outreach</li>
+      <li>Built micro:bit-based applications with Python</li>
+      <li>Mentored FIRST Lego League robotics teams</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Gallery Photo 1">
+      <img src="photo2.jpg" alt="Gallery Photo 2">
+      <img src="photo3.jpg" alt="Gallery Photo 3">
+      <!-- Add more photos here -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Cameron Cheung
+  </footer>
 
 </body>
 </html>
