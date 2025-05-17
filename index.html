@@ -16,30 +16,40 @@
       font-family: Arial, sans-serif;
       background-color: #1e1e1e;
       color: white;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.03) 10px,
+        transparent 10px,
+        transparent 20px
+      );
     }
 
     header {
       background-color: #341539;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
 
     img.profile {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
+      border: 5px solid white;
       margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
     p.subtitle {
+      font-size: 1.25rem;
       color: #ccc;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     nav {
@@ -49,10 +59,11 @@
     nav a {
       color: white;
       background-color: #55215f;
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1.25rem;
       margin: 0 0.5rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 1rem;
       transition: background 0.3s;
     }
 
@@ -61,34 +72,60 @@
     }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 800px;
+      padding: 4rem 1rem;
+      max-width: 900px;
       margin: auto;
+    }
+
+    .box {
+      background-color: #2e2e2e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 3rem;
     }
 
     section h2 {
       margin-bottom: 1rem;
+      font-size: 2rem;
       color: #ffdbff;
+    }
+
+    section p, section ul {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       object-fit: cover;
-      height: 180px;
+      height: 200px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       background-color: #341539;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       color: #aaa;
+      font-size: 1rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
@@ -106,32 +143,36 @@
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Cameron, a high school student with a passion for robotics, mentoring, and martial arts. I’ve been doing kendo for 8 years and love helping middle school students get into STEM through robotics programs and fairs.</p>
+    <div class="box">
+      <h2>About Me</h2>
+      <p>Hello! I'm Cameron, a high school student passionate about science, technology, and martial arts. I’ve been practicing kendo for over 7 years and actively mentor middle school robotics teams. I love making STEM fun and accessible through hands-on learning.</p>
+    </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <p>Here are a few things I’ve worked on:</p>
-    <ul>
-      <li>Organized a STEM Fair with industry outreach</li>
-      <li>Built micro:bit-based applications with Python</li>
-      <li>Mentored FIRST Lego League robotics teams</li>
-    </ul>
+    <div class="box">
+      <h2>Projects</h2>
+      <p>Here are some of the things I’ve built or contributed to:</p>
+      <ul>
+        <li>Organized a STEM Fair with industry outreach and community engagement</li>
+        <li>Developed micro:bit-based Python apps for real-world interaction</li>
+        <li>Mentored FIRST Lego League robotics teams and presented at school events</li>
+      </ul>
+    </div>
   </section>
 
   <section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-      <img src="IMG_7734.JPG" alt="Gallery Photo 1">
-      <img src="photo2.jpg" alt="Gallery Photo 2">
-      <img src="photo3.jpg" alt="Gallery Photo 3">
-      <!-- Add more photos here -->
+    <div class="box">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="IMG_7734.JPG" alt="Gallery Photo 1">
+        <!-- Add more <img> tags here as you include more photos -->
+      </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Cameron Cheung
+    &copy; 2025 Cameron Cheung — Built with 💻 and 🎯
   </footer>
 
 </body>
