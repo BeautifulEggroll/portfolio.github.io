@@ -12,18 +12,18 @@
       padding: 0;
     }
     header {
-      background-color: #333;
+      background-color: #341539;
       color: white;
       padding: 1rem;
-      text-align: center;
+      text-align: left;
     }
     main {
       padding: 2rem;
     }
     footer {
-      background-color: #333;
+      background-color: #341539;
       color: white;
-      text-align: center;
+      text-align: left;
       padding: 1rem;
       position: fixed;
       bottom: 0;
