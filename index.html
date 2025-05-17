@@ -27,13 +27,15 @@
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
     }
 
+    /* Hexagon aspect ratio: width 200px, height = 200 * 0.866 = 173.2px */
     .profile-container {
       width: 180px;
-      aspect-ratio: 1;
+      height: 156px; /* 180 * 0.866 */
       margin: 0 auto 1rem;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background: #783083;
       padding: 4px;
+      box-sizing: border-box;
     }
 
     .profile {
@@ -105,24 +107,24 @@
       padding-left: 1.5rem;
     }
 
-    /* Hexagon Gallery Image Styles */
+    /* Gallery styles */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
       justify-content: center;
+      gap: 1.5rem;
     }
 
-    .hexagon-container {
+    /* Hexagon container with correct aspect ratio */
+    .hexagon-wrap {
       width: 200px;
-      aspect-ratio: 1;
-      position: relative;
+      height: 173.2px; /* 200 * 0.866 */
+      background: #783083;
       clip-path: polygon(
         25% 0%, 75% 0%,
         100% 50%, 75% 100%,
         25% 100%, 0% 50%
       );
-      background: #783083;
       padding: 4px;
       box-sizing: border-box;
     }
@@ -130,7 +132,7 @@
     .hexagon {
       width: 100%;
       height: 100%;
-      background-color: #1e1e1e;
+      background: #1e1e1e;
       clip-path: inherit;
       overflow: hidden;
     }
@@ -190,7 +192,7 @@
     <div class="box" style="max-width: 100%; margin: 0; padding: 2rem;">
       <h2>Photo Gallery</h2>
       <div class="gallery">
-        <div class="hexagon-container">
+        <div class="hexagon-wrap">
           <div class="hexagon">
             <img src="IMG_7734.JPG" alt="Gallery Photo 1">
           </div>
