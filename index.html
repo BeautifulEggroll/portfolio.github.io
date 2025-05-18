@@ -9,14 +9,13 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
       background-color: #1e1e1e;
       color: white;
-      background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><polygon points="20,0 40,20 20,40 0,20" fill="%231e1e1e" stroke="%23444444" stroke-width="0.5"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M40 0 L80 20 L80 60 L40 80 L0 60 L0 20 Z" fill="%231e1e1e" stroke="%23333333" stroke-width="0.5"/></svg>');
       background-size: 60px 60px;
     }
 
@@ -24,29 +23,24 @@
       background-color: #341539;
       padding: 3rem 1rem 2rem;
       text-align: center;
-      clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
     }
 
-    .angled-box {
-      clip-path: polygon(
-        10% 0%, 90% 0%,
-        100% 10%, 100% 90%,
-        90% 100%, 10% 100%,
-        0% 90%, 0% 10%
-      );
-      background: #783083;
-      padding: 4px;
-      margin: 0 auto 1rem;
+    .angled-img-wrapper {
       width: 180px;
       height: 180px;
+      background: #783083;
+      padding: 5px;
+      margin: 0 auto 1rem;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
     }
 
-    .angled-box img {
+    .angled-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      clip-path: inherit;
       display: block;
+      clip-path: inherit;
     }
 
     h1 {
@@ -71,8 +65,8 @@
       margin: 0 0.4rem;
       text-decoration: none;
       font-size: 1rem;
-      clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
       display: inline-block;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
       transition: background 0.3s;
     }
 
@@ -89,18 +83,18 @@
     .box {
       background-color: #2e2e2e;
       padding: 2rem;
-      clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       margin-bottom: 3rem;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    section h2 {
-      margin-bottom: 1rem;
+    h2 {
       font-size: 2rem;
+      margin-bottom: 1rem;
       color: #ffdbff;
     }
 
-    section p, section ul {
+    p, ul {
       font-size: 1.2rem;
       line-height: 1.8;
       color: #e0e0e0;
@@ -110,7 +104,6 @@
       padding-left: 1.5rem;
     }
 
-    /* Gallery styles */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -118,18 +111,38 @@
       gap: 1.5rem;
     }
 
-    .angled-image {
+    .angled-img-wrapper.gallery-img {
       width: 200px;
       height: 200px;
-      background: #783083;
-      padding: 4px;
-      clip-path: polygon(
-        10% 0%, 90% 0%,
-        100% 10%, 100% 90%,
-        90% 100%, 10% 100%,
-        0% 90%, 0% 10%
-      );
-      box-sizing: border-box;
     }
 
-    .angled-image .content {
+    footer {
+      background-color: #341539;
+      text-align: center;
+      padding: 1.5rem;
+      color: #aaa;
+      font-size: 1rem;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="angled-img-wrapper">
+      <img src="52E4FAAA-8A13-4DCF-811A-00E9D7A4FEAA_1_201_a_Original.jpg" alt="Cameron Cheung" />
+    </div>
+    <h1>Cameron Cheung</h1>
+    <p class="subtitle">Student | Robotics Mentor | Kendo Practitioner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="box">
+      <h2>About Me</h2>
+      <p>Hello! I'm Cameron, a high school student passionate about science, technology, and martial arts. I’ve been practicing kendo for over 7 years and actively mentor middle school robotics teams. I love making
