@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cameron Cheung's Portfolio</title>
   <style>
-
-        
     * {
       margin: 0;
       padding: 0;
@@ -107,23 +105,29 @@
       padding-left: 1.5rem;
     }
 
-    /* Hexagon Gallery Image Styles */
+    /* Resume iframe style */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background-color: white;
+    }
+
+    /* Gallery Styling */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
       justify-content: center;
+      gap: 2rem;
+      width: 100%;
     }
 
     .hexagon-container {
       width: 200px;
       aspect-ratio: 1;
-      position: relative;
-      clip-path: polygon(
-        25% 0%, 75% 0%,
-        100% 50%, 75% 100%,
-        25% 100%, 0% 50%
-      );
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background: #783083;
       padding: 4px;
       box-sizing: border-box;
@@ -165,6 +169,7 @@
     <nav>
       <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
       <a href="#gallery">Gallery</a>
     </nav>
   </header>
@@ -176,18 +181,12 @@
     </div>
   </section>
 
-<section id="resume">
-  <div class="box">
-    <h2>My Resume</h2>
-    <iframe 
-      src="Resume (1).pdf" 
-      width="100%" 
-      height="600px" 
-      style="border: none; clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%); box-shadow: 0 4px 12px rgba(0,0,0,0.3); background-color: white;">
-    </iframe>
-  </div>
-</section>
-
+  <section id="resume">
+    <div class="box">
+      <h2>Resume</h2>
+      <iframe src="Resume (1).pdf"></iframe>
+    </div>
+  </section>
 
   <section id="projects">
     <div class="box">
@@ -201,23 +200,22 @@
     </div>
   </section>
 
- <section id="gallery" style="padding: 0; margin: 0;">
-  <div class="box" style="max-width: 100%; margin: 0; padding: 2rem;">
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-      <div class="hexagon-wrap">
-        <div class="hexagon">
-          <img src="IMG_7734.JPG" alt="Gallery Photo 1">
+  <section id="gallery">
+    <div class="box" style="max-width: 100%;">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <div class="hexagon-container">
+          <div class="hexagon">
+            <img src="IMG_7734.JPG" alt="Gallery Photo 1" />
+          </div>
         </div>
+        <!-- Add more images as needed -->
       </div>
-      <!-- Add more images like the above block -->
     </div>
-  </div>
-</section>
-
+  </section>
 
   <footer>
-    &copy; 2025 Cameron Cheung — Built with github
+    &copy; 2025 Cameron Cheung — Built with GitHub
   </footer>
 
 </body>
