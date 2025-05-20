@@ -46,6 +46,12 @@
 
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .email {
+      font-size: 0.9rem;
+      color: #ccc;
       margin-bottom: 0.5rem;
     }
 
@@ -105,46 +111,34 @@
       padding-left: 1.5rem;
     }
 
-    /* Resume iframe style */
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      background-color: white;
-    }
-
-    /* Gallery Styling */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
       width: 100%;
     }
 
-    .hexagon-container {
+    .hexagon-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hexagon {
       width: 200px;
       aspect-ratio: 1;
+      position: relative;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       background: #783083;
       padding: 4px;
       box-sizing: border-box;
     }
 
-    .hexagon {
-      width: 100%;
-      height: 100%;
-      background-color: #1e1e1e;
-      clip-path: inherit;
-      overflow: hidden;
-    }
-
     .hexagon img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      clip-path: inherit;
       display: block;
     }
 
@@ -156,13 +150,6 @@
       font-size: 1rem;
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
     }
-
-    .email {
-     font-size: 0.9rem;
-     color: #ccc;
-     margin-bottom: 0.5rem;
-    }
-
   </style>
 </head>
 <body>
@@ -172,12 +159,14 @@
       <img src="52E4FAAA-8A13-4DCF-811A-00E9D7A4FEAA_1_201_a_Original.jpg" alt="Cameron Cheung" class="profile" />
     </div>
     <h1>Cameron Cheung</h1>
-    <p class="subtitle">Student | Robotics Captain | Kendo Practitioner</p>
     <p class="email">camche610@gmail.com</p>
+    <p class="subtitle">Student | Robotics Mentor | Kendo Practitioner</p>
     <nav>
       <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
+      <a href="#extracurriculars">Extracurriculars</a>
       <a href="#resume">Resume</a>
+      <a href="#reflections">Reflections</a>
       <a href="#gallery">Gallery</a>
     </nav>
   </header>
@@ -189,13 +178,6 @@
     </div>
   </section>
 
-  <section id="resume">
-    <div class="box">
-      <h2>Resume</h2>
-      <iframe src="Resume (1).pdf"></iframe>
-    </div>
-  </section>
-
   <section id="projects">
     <div class="box">
       <h2>Projects</h2>
@@ -203,26 +185,53 @@
       <ul>
         <li>Organized a STEM Fair with industry outreach and community engagement</li>
         <li>Developed micro:bit-based Python apps for real-world interaction</li>
-        <li>j0tiMentored FIRST Lego League robotics teams and presented at school events</li>
         <li>Mentored FIRST Lego League robotics teams and presented at school events</li>
-        <li>Mentored FIRST Lego League robotics teams and presented at school events</li>
-        <li>Mentored FIRST Lego League robotics teams and presented at school events</li>
-        <li>Mentored FIRST Lego League robotics teams and presented at school events</li>
-
       </ul>
     </div>
   </section>
 
-  <section id="gallery">
-    <div class="box" style="max-width: 100%;">
+  <section id="extracurriculars">
+    <div class="box">
+      <h2>Extracurriculars</h2>
+      <p>Here are some activities I participate in outside of class:</p>
+      <ul>
+        <li>Kendo - 7 years of disciplined martial arts training</li>
+        <li>Robotics Team Mentorship</li>
+        <li>STEM Fair Organizer</li>
+        <li>3D Modeling and Printing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="box">
+      <h2>Resume</h2>
+      <iframe 
+        src="Resume (1).pdf" 
+        width="100%" 
+        height="600px" 
+        style="border: none; clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%); box-shadow: 0 4px 12px rgba(0,0,0,0.3); background-color: white;">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="reflections">
+    <div class="box">
+      <h2>Reflections</h2>
+      <p>This section contains my thoughts on growth, learning, and the experiences that have shaped me. I reflect on my personal and academic development through various activities and projects.</p>
+    </div>
+  </section>
+
+  <section id="gallery" style="padding: 0; margin: 0;">
+    <div class="box" style="max-width: 100%; margin: 0; padding: 2rem;">
       <h2>Photo Gallery</h2>
       <div class="gallery">
-        <div class="hexagon-container">
+        <div class="hexagon-wrap">
           <div class="hexagon">
-            <img src="IMG_7734.JPG" alt="Gallery Photo 1" />
+            <img src="IMG_7734.JPG" alt="Gallery Photo 1">
           </div>
         </div>
-        <!-- Add more images as needed -->
+        <!-- Add more gallery images in same format -->
       </div>
     </div>
   </section>
