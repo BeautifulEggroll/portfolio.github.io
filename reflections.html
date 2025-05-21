@@ -26,10 +26,27 @@
       font-size: 2.5rem;
     }
 
+    .back-button {
+      display: inline-block;
+      background-color: #55215f;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      margin: 2rem auto 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+      clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+      transition: background 0.3s;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #783083;
+    }
+
     main {
       max-width: 800px;
-      margin: 4rem auto;
-      padding: 2rem;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
     }
 
     .box {
@@ -77,6 +94,8 @@
   </header>
 
   <main>
+    <a class="back-button" href="index.html">&#8592; Go Back</a>
+
     <div class="box">
       <h2>Looking Back and Moving Forward</h2>
       <p>
