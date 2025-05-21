@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cameron's Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><polygon points="20,0 40,10 40,30 20,40 0,30 0,10" fill="%231e1e1e" stroke="%23444444" stroke-width="0.5"/></svg>');
+      background-size: 60px 52px;
+    }
+
+    header {
+      background-color: #341539;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      background-color: #55215f;
+      padding: 0.6rem 1.2rem;
+      margin: 0 0.4rem;
+      text-decoration: none;
+      font-size: 1rem;
+      clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #783083;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .project-box {
+      background-color: #2e2e2e;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-box h2 {
+      color: #ffdbff;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-box p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-box a {
+      color: #ffdbff;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #341539;
+      text-align: center;
+      padding: 1.5rem;
+      color: #aaa;
+      font-size: 1rem;
+      clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="project-box">
+      <h2>Valorant Info App</h2>
+      <p>Created an app that allows the user to quickly access essential information about various Valorant Characters.</p>
+      <a href="https://studio.code.org/projects/applab/enD0nFQmahEunlZBFIcJzqJKMq6vSZ4Ly9oKHrgYpHk">View Details</a>
+    </div>
+
+    <div class="project-box">
+      <h2>Micro:bit Python Apps</h2>
+      <p>Created Python-based micro:bit apps that interact with physical systems and taught younger students how to build their own.</p>
+      <a href="#">View Code</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Cameron Cheung — Projects Page
+  </footer>
+</body>
+</html>
