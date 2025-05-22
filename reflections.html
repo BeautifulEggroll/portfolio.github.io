@@ -2,70 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reflection | Cameron Cheung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections - Cameron Cheung</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background-color: #1e1e1e;
-      color: #fff;
+      color: white;
       background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><polygon points="20,0 40,10 40,30 20,40 0,30 0,10" fill="%231e1e1e" stroke="%23444444" stroke-width="0.5"/></svg>');
       background-size: 60px 52px;
     }
 
     header {
       background-color: #341539;
-      padding: 2rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
     }
 
-    header h1 {
-      margin: 0;
+    h1 {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .back-button {
-      display: inline-block;
-      background-color: #55215f;
+    nav a {
       color: white;
+      background-color: #55215f;
       padding: 0.6rem 1.2rem;
-      margin: 2rem auto 1rem;
+      margin: 0 0.4rem;
       text-decoration: none;
       font-size: 1rem;
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+      display: inline-block;
       transition: background 0.3s;
-      text-align: center;
     }
 
-    .back-button:hover {
+    nav a:hover {
       background-color: #783083;
     }
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto 4rem;
-      padding: 0 1rem;
+    section {
+      padding: 4rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .box {
+    .reflection-box {
       background-color: #2e2e2e;
       padding: 2rem;
       clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .box h2 {
-      color: #ffdbff;
-      margin-bottom: 1rem;
-    }
-
-    .box p {
+    .reflection-box p {
       font-size: 1.2rem;
       line-height: 1.8;
       color: #e0e0e0;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -76,40 +76,25 @@
       font-size: 1rem;
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
     }
-
-    a {
-      color: #ffdbff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Reflections</h1>
+    <h1>My Reflection</h1>
+    <nav>
+      <a href="index.html">&#8592; Back to Main Page</a>
+    </nav>
   </header>
 
-  <main>
-    <a class="back-button" href="index.html">&#8592; Go Back</a>
-
-    <div class="box">
-      <h2>Looking Back and Moving Forward</h2>
-      <p>
-        Over the past few years, I’ve grown a lot—both as a student and as someone who enjoys sharing knowledge with others. One of the most rewarding moments came when I helped teach two siblings how to code Java using Minecraft. Seeing them get excited as they created their own commands and features reminded me how powerful curiosity and learning can be. I’ve developed stronger communication and leadership skills by mentoring robotics students and organizing STEM events, and I've learned how to work through challenges with confidence.
-      </p>
-      <p>
-        My favorite moment in robotics was when our team received the Inspire Award and made it through ILT. That moment captured all the late nights, team effort, and resilience we had built together. Looking ahead, I hope to keep inspiring others—whether it’s through engineering, design, or education. I want to explore more about how technology can be used to improve lives and continue finding new ways to challenge myself while lifting up those around me.
-      </p>
+  <section>
+    <div class="reflection-box">
+      <p>Throughout this journey, I've grown tremendously in confidence, technical skills, and leadership. Mentoring robotics students and helping organize events has given me the opportunity to develop my communication and teaching abilities. My favorite moment was when our robotics team won the Inspire Award and advanced through ILT—seeing our hard work recognized on such a scale was unforgettable.</p>
+      <p>Outside of team efforts, I also enjoyed teaching two younger siblings how to code Java using Minecraft, watching their eyes light up as they built their first mods. Looking ahead, I want to continue mentoring others, explore more advanced electronics and programming, and keep pushing my creative boundaries in STEM and beyond.</p>
     </div>
-  </main>
+  </section>
 
   <footer>
-    &copy; 2025 Cameron Cheung | <a href="index.html">Back to Portfolio</a>
+    &copy; 2025 Cameron Cheung — Reflections Page
   </footer>
-
 </body>
 </html>

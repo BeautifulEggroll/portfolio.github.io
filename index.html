@@ -112,34 +112,30 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      width: 100%;
-    }
-
-    .hexagon-wrap {
       display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
       justify-content: center;
-      align-items: center;
+      padding: 1rem 0;
     }
 
-    .hexagon {
-      width: 200px;
-      aspect-ratio: 1;
-      position: relative;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background: #783083;
-      padding: 4px;
-      box-sizing: border-box;
+    .gallery-item {
+      flex: 1 1 200px;
+      cursor: pointer;
     }
 
-    .hexagon img {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      clip-path: inherit;
       display: block;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    iframe {
+      border: none;
+      clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background-color: white;
     }
 
     footer {
@@ -149,6 +145,59 @@
       color: #aaa;
       font-size: 1rem;
       clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%);
+      margin-top: 4rem;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 2rem;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      z-index: 1001;
+      transition: background 0.3s;
+    }
+
+    .close:hover {
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
@@ -186,8 +235,8 @@
         <li>Kendo - 7 years of disciplined martial arts training</li>
         <li>Robotics Team Captain - Teach, learn and compete alongside teammates</li>
         <li>STEM Fair - Introduced our community to STEM companies and teams</li>
-        <li>3D Modeling and Printing - selling files for 3d printed gaming peripherals</li>
-        <li>Youth Science Center - Teaching k-8 STEM skills</li>
+        <li>3D Modeling and Printing - Selling files for 3D-printed gaming peripherals</li>
+        <li>Youth Science Center - Teaching K-8 STEM skills</li>
       </ul>
     </div>
   </section>
@@ -195,39 +244,96 @@
   <section id="resume">
     <div class="box">
       <h2>Resume</h2>
-      <iframe 
-        src="Resume (1).pdf" 
-        width="100%" 
-        height="600px" 
-        style="border: none; clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%); box-shadow: 0 4px 12px rgba(0,0,0,0.3); background-color: white;">
-      </iframe>
+      <iframe src="Resume (1).pdf" width="100%" height="600px"></iframe>
     </div>
   </section>
 
   <section id="reflections">
-    <div class="box">
-      <h2>Reflections</h2>
-      <p>This section contains my thoughts on growth, learning, and the experiences that have shaped me. I reflect on my personal and academic development through various activities and projects.</p>
-    </div>
-  </section>
+  <div class="box">
+    <h2>Reflections</h2>
+    <p>Over the past few years, my journey in robotics has been incredibly rewarding. One of my favorite moments was when our team received the Inspire Award, which felt like a true recognition of our hard work and dedication. Making it through the Illinois Leadership Tournament (ILT) was another highlight that showcased our perseverance and teamwork. Beyond competitions, I grew personally by teaching my two younger siblings how to code in Java through Minecraft. Sharing my passion for programming and seeing them excited to learn was deeply fulfilling.</p>
+    <p>Looking ahead, I am excited to continue developing my skills in STEM and mentoring others along the way. I want to keep pushing myself both academically and in extracurriculars like robotics and Kendo. I hope to inspire more young people to explore technology and creativity, just like I was inspired. Ultimately, I aspire to pursue a career that combines my love for coding, problem-solving, and helping others grow. This reflection motivates me to keep learning and embracing every opportunity that comes my way.</p>
+  </div>
+</section>
 
-  <section id="gallery" style="padding: 0; margin: 0;">
-    <div class="box" style="max-width: 100%; margin: 0; padding: 2rem;">
+  <section id="gallery">
+    <div class="box">
       <h2>Photo Gallery</h2>
       <div class="gallery">
-        <div class="hexagon-wrap">
-          <div class="hexagon">
-            <img src="IMG_7734.JPG" alt="Gallery Photo 1">
-          </div>
-        </div>
-        <!-- Add more gallery images in same format -->
+        <div class="gallery-item"><img src="IMG_7734.JPG" alt="1"></div>
+        <div class="gallery-item"><img src="Screenshot 2025-05-21 234204.png" alt="2"></div>
+        <div class="gallery-item"><img src="Robotics1.JPG" alt="3"></div>
+        <div class="gallery-item"><img src="Robotics2.JPG" alt="4"></div>
       </div>
     </div>
   </section>
+
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <button class="close" id="closeBtn">&times;</button>
+      <img src="" id="modalImg" alt="Expanded View">
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 Cameron Cheung — Built with GitHub
   </footer>
 
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
+
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      modalImg.src = galleryItems[index].src;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      modalImg.src = galleryItems[currentIndex].src;
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      modalImg.src = galleryItems[currentIndex].src;
+    }
+
+    galleryItems.forEach((img, index) => {
+      img.addEventListener("click", () => openModal(index));
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal || e.target === modalImg) {
+        const rect = modalImg.getBoundingClientRect();
+        const clickX = e.clientX;
+        const midpoint = rect.left + rect.width / 2;
+
+        if (clickX < midpoint) {
+          showPrev();
+        } else {
+          showNext();
+        }
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (modal.style.display === "flex") {
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "Escape") closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
